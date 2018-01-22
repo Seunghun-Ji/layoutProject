@@ -30,7 +30,7 @@ public class DemoApplication {
 	@Bean
 	public EmbeddedServletContainerFactory servletContainer() {
 		TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory();
-		tomcat.setPort(8080);
+		tomcat.setPort(8088);
 		tomcat.setContextPath("/demo");
 		tomcat.setUriEncoding(Charset.forName("UTF-8"));
 		tomcat.setSessionTimeout(60*24);
