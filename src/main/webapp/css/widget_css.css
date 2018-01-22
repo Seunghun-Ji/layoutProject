@@ -6,11 +6,21 @@ html, body{
 	margin: 0px;
 }
 
+
 #widget1{
 	float: left;
 	width: 40%;
 	height: 100%;
 	background-color: #58FA58;
+}
+
+#widget1>table{
+	margin: auto;
+}
+
+video{
+	width: 250px;
+	height: 180px;
 }
 
 #widget2{

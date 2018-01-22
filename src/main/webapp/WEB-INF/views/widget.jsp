@@ -12,7 +12,7 @@
 		<table border="1">
 		   <tr>
 		      <td>
-		      	<video controls width="250px" height="200px">
+		      	<video controls>
 					<source src="img/mp4" type ="video/mp4">
 					<source src="img/webm" type ="video/webm">
 					<source src="img/ogv" type ="video/ogg">
@@ -21,27 +21,7 @@
 				</video> 
 			  </td>
 		      <td>
-		      	<video controls width="250px" height="200px">
-					<source src="img/mp4" type ="video/mp4">
-					<source src="img/webm" type ="video/webm">
-					<source src="img/ogv" type ="video/ogg">
-				    <source src="">
-				  <p>지원하지않는 브라우저입니다.</P>
-				</video> 
-			  </td>
-		   </tr>
-		   <tr>
-		      <td>
-		      	<video controls width="250px" height="200px">
-					<source src="img/mp4" type ="video/mp4">
-					<source src="img/webm" type ="video/webm">
-					<source src="img/ogv" type ="video/ogg">
-				    <source src="">
-				  <p>지원하지않는 브라우저입니다.</P>
-				</video> 
-			  </td>
-		      <td>
-		      	<video controls width="250px" height="200px">
+		      	<video controls>
 					<source src="img/mp4" type ="video/mp4">
 					<source src="img/webm" type ="video/webm">
 					<source src="img/ogv" type ="video/ogg">
@@ -52,7 +32,7 @@
 		   </tr>
 		   <tr>
 		      <td>
-		      	<video controls width="250px" height="200px">
+		      	<video controls>
 					<source src="img/mp4" type ="video/mp4">
 					<source src="img/webm" type ="video/webm">
 					<source src="img/ogv" type ="video/ogg">
@@ -61,7 +41,7 @@
 				</video> 
 			  </td>
 		      <td>
-		      	<video controls width="250px" height="200px">
+		      	<video controls>
 					<source src="img/mp4" type ="video/mp4">
 					<source src="img/webm" type ="video/webm">
 					<source src="img/ogv" type ="video/ogg">
@@ -72,7 +52,7 @@
 		   </tr>
 		   <tr>
 		      <td>
-		      	<video controls width="250px" height="200px">
+		      	<video controls>
 					<source src="img/mp4" type ="video/mp4">
 					<source src="img/webm" type ="video/webm">
 					<source src="img/ogv" type ="video/ogg">
@@ -81,7 +61,27 @@
 				</video> 
 			  </td>
 		      <td>
-		      	<video controls width="250px" height="200px">
+		      	<video controls>
+					<source src="img/mp4" type ="video/mp4">
+					<source src="img/webm" type ="video/webm">
+					<source src="img/ogv" type ="video/ogg">
+				    <source src="">
+				  <p>지원하지않는 브라우저입니다.</P>
+				</video> 
+			  </td>
+		   </tr>
+		   <tr>
+		      <td>
+		      	<video controls>
+					<source src="img/mp4" type ="video/mp4">
+					<source src="img/webm" type ="video/webm">
+					<source src="img/ogv" type ="video/ogg">
+				    <source src="">
+				  <p>지원하지않는 브라우저입니다.</P>
+				</video> 
+			  </td>
+		      <td>
+		      	<video controls>
 					<source src="img/mp4" type ="video/mp4">
 					<source src="img/webm" type ="video/webm">
 					<source src="img/ogv" type ="video/ogg">
