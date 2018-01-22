@@ -3,6 +3,8 @@
  */
 package com.example.demo.controller;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.domain.HelloWorld;
+import com.example.demo.service.AddressService;
 import com.example.demo.service.HelloWorldService;
 
 /**
@@ -35,13 +38,20 @@ public class HelloWorldController {
 	
 	@Autowired
 	HelloWorldService helloWorldService; 
+	@Autowired
+	AddressService addressService;
 	
 	@RequestMapping(value = "/widget", method = RequestMethod.GET)
 	public String helloPage(
 			HttpServletRequest request,
-			Model model){
+			Model model) throws IOException{
 		
 		System.out.println("widget 페이지 접속!");
+		
+		addressService.getConstructInfo();
+		
+		
+		
 		/**
 		 * src/main/webapp/WEB-INF/views/hello 폴더 밑에 world.jsp
 		 * DispatcherServletConfig.ViewResolver에서 Bean 등록을 통해
