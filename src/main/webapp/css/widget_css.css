@@ -82,9 +82,15 @@ video{
     border-bottom: 1px solid #ccc;
 }
 
-#widget3{
+#map{
 	float: right;
 	width: 60%;
 	height: 50%;
 	overflow: scroll;
 }
+
+::-webkit-scrollbar {width: 12px; height: 12px;  }
+::-webkit-scrollbar-button:start:decrement, 
+::-webkit-scrollbar-button:end:increment {display: block; width: 12px;height: 12px; background: url() rgba(0,0,0,.05);}
+::-webkit-scrollbar-track {     background: rgba(0,0,0,.05); }
+::-webkit-scrollbar-thumb {  background: rgba(0,0,0,.1);  }
