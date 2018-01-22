@@ -93,3 +93,7 @@ public class HelloWorldDao extends HibernateDaoSupport{
 	}
 	
 }
+
+
+
+	
