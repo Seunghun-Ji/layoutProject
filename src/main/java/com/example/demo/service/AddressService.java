@@ -101,13 +101,6 @@ public class AddressService {
 		}
 		*/
 		
-<<<<<<< HEAD
-	}
 
-	
-=======
-	}*/
->>>>>>> fff7d5054449108cafd848ce86348e1bf1beb7e8
-	
 
 }

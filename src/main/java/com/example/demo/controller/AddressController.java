@@ -48,14 +48,7 @@ public class AddressController {
 		
 		System.out.println("widget 페이지 접속!");
 		
-<<<<<<< HEAD:src/main/java/com/example/demo/controller/AddressController.java
-		//addressService.getConstructInfo();
 		addressService.getShelterAddr();
-=======
-		/*addressService.getConstructInfo();
-		*/
->>>>>>> fff7d5054449108cafd848ce86348e1bf1beb7e8:src/main/java/com/example/demo/controller/HelloWorldController.java
-		
 		
 		/**
 		 * src/main/webapp/WEB-INF/views/hello 폴더 밑에 world.jsp
