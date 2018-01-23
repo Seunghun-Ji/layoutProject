@@ -19,7 +19,7 @@ public class AddressService {
 	
 	
 	
-//	String url ="http://api.suwon.go.kr/openapi-data/service/MtInspInfo/getMtjeopsuInfo?pageNo=1&numOfRows=1&ServiceKey=NoCToThFsptDplepfSS2GE4Y2VVUwo8kryAv6yoKbCSDJCUizMkSz5PMHOM7Xw9fSWrbW5CC7%2Fm%2Bkf9ONVzMnQ%3D%3D";
+/*//	String url ="http://api.suwon.go.kr/openapi-data/service/MtInspInfo/getMtjeopsuInfo?pageNo=1&numOfRows=1&ServiceKey=NoCToThFsptDplepfSS2GE4Y2VVUwo8kryAv6yoKbCSDJCUizMkSz5PMHOM7Xw9fSWrbW5CC7%2Fm%2Bkf9ONVzMnQ%3D%3D";
 	
 	
 	
@@ -48,20 +48,20 @@ public class AddressService {
 			ob.put("addr_gu",addr[4]);
 			ob.put("addr_detail",addr[8]);
 			
-			/*for(int i=0;i<addr.length;i++) {
+			for(int i=0;i<addr.length;i++) {
 				System.out.println(i+" "+addr[i]);
 				JSONObject ob = new JSONObject();
 				ob.put("name", addr[1]);
 				
 				
-			}*/
+			}
 			
 			num++;
 			//System.out.println(e.text());
 			
 		}
 		
-	}
+	}*/
 	
 
 }

@@ -48,8 +48,8 @@ public class HelloWorldController {
 		
 		System.out.println("widget 페이지 접속!");
 		
-		addressService.getConstructInfo();
-		
+		/*addressService.getConstructInfo();
+		*/
 		
 		
 		/**
