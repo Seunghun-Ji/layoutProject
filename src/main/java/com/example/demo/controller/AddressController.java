@@ -33,7 +33,7 @@ import com.example.demo.service.HelloWorldService;
 
 @Controller
 //@RequestMapping(value = "/hello")
-public class HelloWorldController {
+public class AddressController {
 
 	
 	@Autowired
@@ -48,8 +48,8 @@ public class HelloWorldController {
 		
 		System.out.println("widget 페이지 접속!");
 		
-		addressService.getConstructInfo();
-		
+		//addressService.getConstructInfo();
+		addressService.getShelterAddr();
 		
 		
 		/**

@@ -43,6 +43,7 @@ public class DataContextConfig {
 
 
 	String defaultPackage = "com.example.demo.domain";
+	
 
 	/**
 	 * data source 설정
@@ -58,7 +59,7 @@ public class DataContextConfig {
 		dataSource.setPassword(dbPassword);
 		return dataSource;
 	}
-
+ 
 
 	@Bean
 	@Qualifier(value = "hibernateTransactionManager")
@@ -77,7 +78,7 @@ public class DataContextConfig {
 		LocalSessionFactoryBean bean = new LocalSessionFactoryBean();
 		bean.setDataSource(this.dataSource());
 		bean.setPackagesToScan(defaultPackage);
-		Properties props = new Properties();
+		/*Properties props = new Properties();
 		props.setProperty("hibernate.dialect", dbDirect);
 		props.setProperty("hibernate.show_sql", "false");
 		props.setProperty("hibernate.format_sql", "false");
@@ -90,7 +91,7 @@ public class DataContextConfig {
 		props.setProperty("hibernate.c3p0.timeout", "10");
 		props.setProperty("hibernate.c3p0.idle_test_period", "60000");
 
-		bean.setHibernateProperties(props);
+		bean.setHibernateProperties(props);*/
 		return bean;
 	}
 
