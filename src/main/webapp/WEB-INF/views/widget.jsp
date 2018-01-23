@@ -91,9 +91,9 @@
 			        	<input type=button value="권선구">
 			        	<input type=button value="영통구">
 			        </th>
-			        <td rowspan="6">
+			        <td id="allConst" name="allConst" rowspan="6">
 			        	<ul>
-			        		<li>경기도 수원시 권선구 호매실로 22-50 (탑동, 권선구 보건소)</li>
+			        		<li >경기도 수원시 권선구 호매실로 22-50 (탑동, 권선구 보건소)</li>
 			        		<li>경기도 수원시 권선구 금호로 83-7 (금곡동)</li>
 			        		<li>경기도 수원시 권선구 세화로 46 (평동)</li>
 			        		<li>경기도 수원시 권선구 상탑로 111-40(서둔동)</li>
@@ -101,14 +101,11 @@
 			        		<li>경기도 수원시 권선구 권중로 7(권선동)</li>
 			        	</ul>
 			        </td>
-			        <td rowspan="6">
-				        <ul>
-				        	<li>청정공원(경기도 수원시 권선구 권선동 1198)</li>
-				        	<li>권선중앙공원(경기도 수원시 권선구 권선동 1269)</li>
-				        	<li>탑동공원(경기도 수원시 권선구 탑동로 57번길 35)</li>
-				        	<li>구운공원(경기도 수원시 권선구 구운로 14번길 42)</li>
-				        	<li>여기산공원(경기도 수원시 권선구 여가산로 26번길 30)</li>
-				        	<li>구운공원(경기도 수원시 권선구 구운로 14번길 42)</li>
+			        <td rowspan="6" id="shel_frame" name="shel_frame" class="shel_frame " >
+				        <ul name="shel">
+				        	<li name="sname">청정공원</li>
+				        	<li name="saddr">경기도 수원시 권선구 권선동 1198</li>
+				   
 				        </ul>
 			        </td>
 			    </tr>

@@ -42,9 +42,7 @@ public class ShelterDao extends HibernateDaoSupport {
                 session.close();
             }
         }
-        for(Shelter s : list) {
-        	System.out.println("###"+list);
-        }
+       
         return list;
 		
 	}
