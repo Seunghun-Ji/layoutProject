@@ -58,7 +58,7 @@ public class AddressService {
 	
 	
 	
-//	String url ="http://api.suwon.go.kr/openapi-data/service/MtInspInfo/getMtjeopsuInfo?pageNo=1&numOfRows=1&ServiceKey=NoCToThFsptDplepfSS2GE4Y2VVUwo8kryAv6yoKbCSDJCUizMkSz5PMHOM7Xw9fSWrbW5CC7%2Fm%2Bkf9ONVzMnQ%3D%3D";
+/*//	String url ="http://api.suwon.go.kr/openapi-data/service/MtInspInfo/getMtjeopsuInfo?pageNo=1&numOfRows=1&ServiceKey=NoCToThFsptDplepfSS2GE4Y2VVUwo8kryAv6yoKbCSDJCUizMkSz5PMHOM7Xw9fSWrbW5CC7%2Fm%2Bkf9ONVzMnQ%3D%3D";
 	
 	
 	
@@ -101,9 +101,13 @@ public class AddressService {
 		}
 		*/
 		
+<<<<<<< HEAD
 	}
 
 	
+=======
+	}*/
+>>>>>>> fff7d5054449108cafd848ce86348e1bf1beb7e8
 	
 
 }

@@ -16,18 +16,40 @@
 		      <td>
 		      	<video controls>
 					<source src="./images/sample.mp4" type ="video/mp4">
-					<source src="img/webm" type ="video/webm">
-					<source src="img/ogv" type ="video/ogg">
-				    <source src="">
 				  <p>지원하지않는 브라우저입니다.</P>
 				</video> 
 			  </td>
 		      <td>
 		      	<video controls>
 					<source src="./images/sample.mp4" type ="video/mp4">
-					<source src="img/webm" type ="video/webm">
-					<source src="img/ogv" type ="video/ogg">
-				    <source src="">
+				  <p>지원하지않는 브라우저입니다.</P>
+				</video> 
+			  </td>
+		   </tr>
+		   <tr>
+		      <td>
+		      	<video controls>
+					<source src="./images/sample.mp4" type ="video/mp4">
+				  <p>지원하지않는 브라우저입니다.</P>
+				</video> 
+			  </td>
+		      <td>
+		      	<video controls>
+					<source src="./images/sample.mp4" type ="video/mp4">
+				  <p>지원하지않는 브라우저입니다.</P>
+				</video> 
+			  </td>
+		   </tr>
+		   <tr>
+		      <td>
+		      	<video controls>
+					<source src="./images/sample.mp4" type ="video/mp4">
+				  <p>지원하지않는 브라우저입니다.</P>
+				</video> 
+			  </td>
+		      <td>
+		      	<video controls>
+					<source src="./images/sample.mp4" type ="video/mp4">
 				  <p>지원하지않는 브라우저입니다.</P>
 				</video> 
 			  </td>
@@ -45,49 +67,6 @@
 		      <td>
 		      	<video controls>
 					<source src="./images/sample.mp4" type ="video/mp4">
-					<source src="img/webm" type ="video/webm">
-					<source src="img/ogv" type ="video/ogg">
-				    <source src="">
-				  <p>지원하지않는 브라우저입니다.</P>
-				</video> 
-			  </td>
-		   </tr>
-		   <tr>
-		      <td>
-		      	<video controls>
-					<source src="./images/sample.mp4" type ="video/mp4">
-					<source src="img/webm" type ="video/webm">
-					<source src="img/ogv" type ="video/ogg">
-				    <source src="">
-				  <p>지원하지않는 브라우저입니다.</P>
-				</video> 
-			  </td>
-		      <td>
-		      	<video controls>
-					<source src="./images/sample.mp4" type ="video/mp4">
-					<source src="img/webm" type ="video/webm">
-					<source src="img/ogv" type ="video/ogg">
-				    <source src="">
-				  <p>지원하지않는 브라우저입니다.</P>
-				</video> 
-			  </td>
-		   </tr>
-		   <tr>
-		      <td>
-		      	<video controls>
-					<source src="./images/sample.mp4" type ="video/mp4">
-					<source src="img/webm" type ="video/webm">
-					<source src="img/ogv" type ="video/ogg">
-				    <source src="">
-				  <p>지원하지않는 브라우저입니다.</P>
-				</video> 
-			  </td>
-		      <td>
-		      	<video controls>
-					<source src="./images/sample.mp4" type ="video/mp4">
-					<source src="img/webm" type ="video/webm">
-					<source src="img/ogv" type ="video/ogg">
-				    <source src="">
 				  <p>지원하지않는 브라우저입니다.</P>
 				</video> 
 			  </td>
@@ -107,10 +86,10 @@
 		    <tbody>
 			    <tr>
 			        <th scope="row" rowspan="6">
-			        	<button>장안구</button>
-			        	<button>팔달구</button>
-			        	<button>권선구</button>
-			        	<button>영통구</button>
+			        	<input type=button value="장안구">
+			        	<input type=button value="팔달구">
+			        	<input type=button value="권선구">
+			        	<input type=button value="영통구">
 			        </th>
 			        <td rowspan="6">
 			        	<ul>
@@ -138,20 +117,7 @@
 	</div>
 	
 	<div id="map"></div>
-	
-	<script>
-      function initMap() {
-        var uluru = {lat: 37.263, lng: 127.028};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
+
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIAm2VjqSmcRmHmmu4L3MdMd_iGl836h4&callback=initMap">
     </script>

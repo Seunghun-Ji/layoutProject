@@ -18,7 +18,7 @@ html, body{
 	width: 80%;
 	height: 80%;
 	margin: auto;
-	top: 30px;
+	top: 20px;
 }
 
 video{
@@ -37,14 +37,13 @@ video{
 	width: 97%;
 	height: 85%;
 	margin: auto;
-	top: 30px;
-	overflow: scroll;
+	top: 20px;
 }
 
 #widget2 .type08 {
     border-collapse: collapse;
     text-align: left;
-    line-height: 1.5;
+    line-height: 2.0;
     border-left: 1px solid #ccc;
     margin: auto;
     font-size: 9pt;
@@ -67,7 +66,6 @@ video{
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     background: #ececec;
-    overflow: scroll;
 }
 
 #widget2 .type08 tbody th button{
@@ -80,6 +78,14 @@ video{
     vertical-align: top;
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    overflow: scroll;
+}
+
+button: hover;
+button{
+	WIDTH: 70pt;
+	HEIGHT: 40pt;
+	margin: 5px;
 }
 
 #map{
