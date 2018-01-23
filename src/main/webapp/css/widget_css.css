@@ -6,24 +6,28 @@ html, body{
 	margin: 0px;
 }
 
-
 #widget1{
 	float: left;
-	width: 40%;
-	height: 100%;
+	width: 35%;
+	height: 95%;
 }
+
 
 #widget1>table{
 	position: relative;
 	width: 80%;
 	height: 80%;
 	margin: auto;
-	top: 20px;
+	padding: auto;
 }
 
 video{
 	width: 250px;
 	height: 180px;
+}
+
+ul{
+	list-style: none;
 }
 
 #widget2{
@@ -81,18 +85,25 @@ video{
     overflow: scroll;
 }
 
-button: hover;
-button{
-	WIDTH: 70pt;
-	HEIGHT: 40pt;
-	margin: 5px;
+select{
+	width: 100%;
+	height: 10%;
+	font-size: 15px;
+	position: relative;
+	top: 15px;
 }
 
-#map{
+#widget3{
 	float: right;
-	width: 60%;
-	height: 50%;
-	overflow: scroll;
+	width: 65%;
+	height: 45%;
+}
+#widget3>fieldset{
+	width: 95%;	
+	height: 100%;
+}
+#map{
+	height: 95%;
 }
 
 ::-webkit-scrollbar {width: 12px; height: 12px;  }
