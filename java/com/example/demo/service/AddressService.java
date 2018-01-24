@@ -46,7 +46,6 @@ public class AddressService {
 		String guName = request.getParameter("Name");
 		System.out.println("클릭한 구 이름은 : "+guName);
 		
-		
 		List<Shelter> list;
 		list = shelterDao.getList(guName);
 		
@@ -57,37 +56,19 @@ public class AddressService {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-/*//	String url ="http://api.suwon.go.kr/openapi-data/service/MtInspInfo/getMtjeopsuInfo?pageNo=1&numOfRows=1&ServiceKey=NoCToThFsptDplepfSS2GE4Y2VVUwo8kryAv6yoKbCSDJCUizMkSz5PMHOM7Xw9fSWrbW5CC7%2Fm%2Bkf9ONVzMnQ%3D%3D";
-	
+	/*
+	String url ="http://api.suwon.go.kr/openapi-data/service/EvacuFacInfo/getEvacufacInfo?pageNo=1&numOfRows=1&NoCToThFsptDplepfSS2GE4Y2VVUwo8kryAv6yoKbCSDJCUizMkSz5PMHOM7Xw9fSWrbW5CC7%2Fm%2Bkf9ONVzMnQ%3D%3D";
 	
 	
 
-//	response = restTemplate.exchange(url, HttpMethod.GET, entity, CustomResponse.class);
+	response = restTemplate.exchange(url, HttpMethod.GET, entity, CustomResponse.class);
 
 
 	
 
 	public void getConstructInfo() {
 	
-		/*System.out.println("It is getConstructionInfo");
+		System.out.println("It is getConstructionInfo");
 		//String url = "https://www.suwon.go.kr/sw-www/deptHome/dep_civil/civil_04/civil_04_04/civil_04_04_04.jsp";
 		String shelterUrl = "https://www.suwon.go.kr/sw-www/deptHome/dep_civil/civil_04/civil_04_04/civil_04_04_04.jsp";
 		Document doc = Jsoup.connect(shelterUrl).get();
@@ -116,8 +97,8 @@ public class AddressService {
 			//System.out.println(e.text());
 			
 		}
-		*/
 		
-
-
+		
+	}
+*/
 }
