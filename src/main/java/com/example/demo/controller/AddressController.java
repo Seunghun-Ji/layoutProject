@@ -43,23 +43,13 @@ public class AddressController {
 	@Autowired
 	AddressService addressService;
 	
+	//address.jsp 호출 
 	@RequestMapping(value = "/address", method = RequestMethod.GET)
-	public String helloPage(
-			HttpServletRequest request,
-			Model model) throws IOException{
-		
-		System.out.println("widget 페이지 접속!");
-	
-		
-		/**
-		 * src/main/webapp/WEB-INF/views/hello 폴더 밑에 world.jsp
-		 * DispatcherServletConfig.ViewResolver에서 Bean 등록을 통해
-		 * prefix, suffix 설정을 미리 했기 때문에 생략이 가능
-		 */
+	public String addressPage(){
 		return "/address";
 	}
 	
-	
+	//클릭한 구에 해당하는 주소 정보를 가져옴
 	@RequestMapping(value="/get/shelter/info")
 	@ResponseBody
 	public String getShelterAddr(HttpServletRequest request) {

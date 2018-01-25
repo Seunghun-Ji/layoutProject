@@ -32,20 +32,23 @@ import com.example.demo.service.HelloWorldService;
  */
 
 @Controller
-//@RequestMapping(value = "/hello")
 public class VideoController {
-	
 	@Autowired
-	HelloWorldService helloWorldService; 
+	HelloWorldService helloWorldService;
 	
 	@Autowired
 	AddressService addressService;
 	
 	@RequestMapping(value = "/video", method = RequestMethod.GET)
-	public String helloPage() {
+	public String helloPage() { 
 		
-		System.out.println("video 페이지 접속!");
-		
-		return "/video";
-	}
-}
+		System.out.println("video 페이지 접속!"); 
+		/**
+		 * 초기 설정은 com.example.demo.config에 DispatcherServletConfig.java에 있다.
+		 * 따라서 src/main/webapp/WEB-INF/views 폴더 밑에 video.jsp 파일 호출.
+		 * DispatcherServletConfig.ViewResolver에서 Bean 등록을 통해
+		 * prefix, suffix 설정을 미리 했기 때문에 생략이 가능
+		 */
+		return "/video"; 
+	} 
+} 

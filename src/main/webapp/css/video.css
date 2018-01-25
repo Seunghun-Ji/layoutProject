@@ -18,13 +18,17 @@ table {
 	height: 100%;
 }
 
-/*
+
 #widget1>table{
 	position: relative;
 	width: 100%;
 	margin: auto;
 	padding: auto;
-}*/
+}
+
+td {
+	width: 50%;
+}
 
 video{
 	width: 100%;

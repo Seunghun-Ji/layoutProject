@@ -1,60 +1,30 @@
 @charset "EUC-KR";
-html, body{
+html, body, #addr_frame{
+	hieght : 100%;
 	width: 100%;
-	height: 100%;
+	height: auto;
 	padding: 0px;
 	margin: 0px;
 }
 
-#widget1{
-	float: left;
-	width: 35%;
-	height: 95%;
-}
-
-
-#widget1>table{
-	position: relative;
-	width: 80%;
-	height: 80%;
-	margin: auto;
-	padding: auto;
-}
-
-video{
-	width: 250px;
-	height: 180px;
-}
-
-#shel_content > ul{
-	list-style: none;
-	margin : 10px;
-}
-
-#addr_frame{
-	float: right;
-	width: 60%;
-	height: 50%;
-}
 
 #addr_frame>table{
 	position: relative;
-	width: 97%;
-	height: 85%;
 	margin: auto;
-	top: 20px;
+	height: 100%;
 }
 
 /* 주소 테이블 */
 #addr_frame .addr_table {
+	
     border-collapse: collapse;
     text-align: left;
     line-height: 2.0;
     margin: auto;
-    font-size: 9pt;
+    font-size: 1em;
 }
 
-/* 구분 건물주소 대피소 */
+/* 구분  대피소 */
 #addr_frame .addr_table thead th {
     padding: 4px;
     font-weight: bold;
@@ -63,8 +33,14 @@ video{
     text-align: center;
 }
 
+#addr_frame .addr_table tbody td div {
+	
+    overflow : scroll-y; 
+} 
+
+
 #addr_frame .addr_table tbody .gu_btn_frame {
-    width: 100%;
+    width: 3%;
     text-align : center;
     background: #f5f1f1;
     vertical-align: top;
@@ -76,41 +52,10 @@ video{
     list-style: none;
 }
 
-
-#addr_frame .addr_table td {
-    width: 350px;
-    padding: 10px;
-    vertical-align: top;
-    overflow-y : scroll; 
+.shel_content:hover {
+	background: #f5f1f1;
 }
 
-
-
-#shel_frame {
-	height : 500px;
-}
-
-select{
-	width: 100%;
-	height: 10%;
-	font-size: 15px;
-	position: relative;
-	top: 15px;
-}
-
-#widget3{
-	float: right;
-	width: 65%;
-	height: 45%;
-}
-#widget3>fieldset{
-	width: 95%;	
-	height: 100%;
-}
-
-#map{
-	height: 95%;
-}
 
 .gu_btn {
 	background-color: #f5f1f1;
@@ -125,14 +70,19 @@ select{
     margin: 2px auto;
     vertical-align: top;
 }
-	
+
+#shel_content{
+	list-style: none;
+	margin : 10px;
+	border-bottom: 2px solid #eaeaea;
 }
+
 .gu_btn:hover {
 	background-color:#c2c2c2;
 }
+
 .gu_btn:active {
 	position:relative;
-	
 }
 
 #sName{
@@ -140,6 +90,6 @@ select{
 	margin :3.5px;
 }
 
-
-
-        
+#sName, #aAddr {
+	height: auto;
+}

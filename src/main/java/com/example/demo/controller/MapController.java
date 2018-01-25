@@ -10,13 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.example.demo.domain.HelloWorld;
 import com.example.demo.service.AddressService;
 import com.example.demo.service.HelloWorldService;
 
@@ -35,8 +31,26 @@ import com.example.demo.service.HelloWorldService;
 //@RequestMapping(value = "/hello")
 public class MapController {
 
-	
 	@Autowired
 	HelloWorldService helloWorldService; 
+
+	@Autowired
+	AddressService addressService;
+	
+	@RequestMapping(value = "/map", method = RequestMethod.GET)
+	public String helloPage(
+			HttpServletRequest request,
+			Model model) throws IOException{
+		
+		System.out.println("map 페이지 접속!");
+				
+		/*
+		 * src/main/webapp/WEB-INF/views/hello 폴더 밑에 world.jsp
+		 * DispatcherServletConfig.ViewResolver에서 Bean 등록을 통해
+		 * prefix, suffix 설정을 미리 했기 때문에 생략이 가능
+		*/
+		return "/map";
+	}
+
 	
 }

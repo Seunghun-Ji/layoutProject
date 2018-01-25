@@ -43,7 +43,7 @@ public class AddressService {
 	
 	public String getShelterAddr(HttpServletRequest request) {
 		
-		String guName = request.getParameter("Name");
+		String guName = request.getParameter("guName");
 		System.out.println("클릭한 구 이름은 : "+guName);
 		
 		
