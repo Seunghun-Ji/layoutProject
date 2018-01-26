@@ -1,20 +1,93 @@
 @charset "EUC-KR";
-html, body, #addr_frame{
-	hieght : 100%;
+html, body, #frame{
+	height : 100%;
 	width: 100%;
-	height: auto;
 	padding: 0px;
 	margin: 0px;
 }
 
 
-#addr_frame>table{
+#table{
 	position: relative;
 	margin: auto;
 	height: 100%;
 }
 
-/* 주소 테이블 */
+
+#tr_head{
+	height: 50px;
+    background: #f5f1f1;
+}
+
+#tr_head th{
+	 text-align: center;
+	 border-bottom: 2px solid #6b6969;
+}
+
+
+#btn_frame {
+	height: auto;
+    width: 3%;
+    text-align : center;
+    background: #f5f1f1;
+    vertical-align: top;
+    
+}
+
+#shel_addr_frame{
+	
+	height: 95%;
+	overflow-y: scroll;
+	
+}
+#shel_addr_content{
+	margin :20px;
+	padding :10px;
+}
+
+#shel_addr_content:hover{
+	background: #f5f1f1;
+}
+
+#shel_addr_content li{
+	 padding: 0px; 
+    list-style: none;
+}
+
+#sName{
+	font-weight: bold;
+	margin :3.5px;
+}
+
+#sName, #aAddr {
+	height: auto;
+}
+
+.gu_btn {
+	background-color: #f5f1f1;
+    display: block;
+    border: 1px solid #eaeaea;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 9px 15px;
+    text-decoration: none;
+    margin: 2px auto;
+    vertical-align: top;
+}
+
+
+.gu_btn:hover {
+	background-color:#c2c2c2;
+}
+
+.gu_btn:active {
+	position:relative;
+}
+
+
+/*
 #addr_frame .addr_table {
 	
     border-collapse: collapse;
@@ -24,7 +97,7 @@ html, body, #addr_frame{
     font-size: 1em;
 }
 
-/* 구분  대피소 */
+구분  대피소
 #addr_frame .addr_table thead th {
     padding: 4px;
     font-weight: bold;
@@ -92,4 +165,4 @@ html, body, #addr_frame{
 
 #sName, #aAddr {
 	height: auto;
-}
+} */

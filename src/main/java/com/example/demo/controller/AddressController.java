@@ -39,8 +39,6 @@ public class AddressController {
 
 	
 	@Autowired
-	HelloWorldService helloWorldService; 
-	@Autowired
 	AddressService addressService;
 	
 	//address.jsp 호출 
@@ -55,76 +53,5 @@ public class AddressController {
 	public String getShelterAddr(HttpServletRequest request) {
 		return addressService.getShelterAddr(request);
 	
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	@ResponseBody
-	@RequestMapping(
-			value = "/list",
-			method = RequestMethod.GET,
-			produces = "application/json; charset=utf8")
-	public String getListHelloWorld(){
-		
-		return helloWorldService.getListHelloWorld();
-	}
-	
-	@ResponseBody
-	@RequestMapping(
-			value = "/{helloWorldId}",
-			method = {RequestMethod.GET},
-			produces = "application/json; charset=utf8")
-	public String getHelloWorld(
-			@PathVariable(value="helloWorldId") String helloWorldId){
-		
-		return helloWorldService.getHelloWorld(helloWorldId);
-	}
-	
-	@ResponseBody
-	@RequestMapping(
-			value = "",
-			method = RequestMethod.POST,
-			produces = "application/json; charset=utf8")
-	public String addHelloWorld(
-			@RequestBody HelloWorld helloWorld){
-		return helloWorldService.addHelloWorld(helloWorld);
-	}
-	
-	@ResponseBody
-	@RequestMapping(
-			value = "",
-			method = RequestMethod.PUT,
-			produces = "application/json; charset=utf8")
-	public String updateHelloWorld(
-			@RequestBody HelloWorld helloWorld){
-		helloWorldService.updateHelloWorld();
-		return "";
-	}
-	
-	@ResponseBody
-	@RequestMapping(
-			value = "",
-			method = RequestMethod.DELETE,
-			produces = "application/json; charset=utf8")
-	public String deleteHelloWorld(
-			@RequestBody HelloWorld helloWorld){
-		helloWorldService.deleteHelloWorld();
-		return "";
 	}
 }

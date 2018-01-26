@@ -24,8 +24,8 @@
 				var temp = 0; //buffer 역할
 				var video = document.getElementsByTagName('video'); //video 태그를 다 가져온다.
 				for(; vidArr[temp] != false && temp < 8; temp += 1);
-				if(temp < 8) {
-					video[temp].src = "./images/sample.mp4";
+				if(temp < 4) {
+					video[temp].src = "https://cctvsec.ktict.co.kr/5173/tYUYvB544d85EMOppaVEumooq3RdAMViQSTHc8kTwLZaaAaPhb6rPd3uH3duaqjv";
 					vidArr[temp] = true;
 				}
 				else
@@ -36,101 +36,68 @@
 		});
 	});
 	
-	$(document).ready(function() { //비디오 영상 삽입
+	$(document).ready(function() { //비디오 영상 삭제
 		$('.btn_d').each(function(i) { //공동 클래스명으로 동작
 			$(this).click(function(e) { //버튼 클릭 시
 				e.preventDefault(); //다른 이벤트 발생을 막는다.
 				var b_id = $(this).attr("value"); //클릭된 버튼의 id를 가져온다.
 				v_num = b_id.substring(0,1);
-				v_num = Number(v_num);
-				v_num -= 1;
-				if(vidArr[v_num] == true) {
-					var video = document.getElementsByTagName('video'); //video 태그를 다 가져온다.
-					video[v_num].src = "#";
-					vidArr[v_num] = false;
+				if(isNaN(v_num))
+					for(var i=0;i<4;i++) {
+						var video = document.getElementsByTagName('video'); //video 태그를 다 가져온다.
+						video[i].src = "#";
+						vidArr[i] = false;
+					}
+				else {
+					v_num = Number(v_num);
+					v_num -= 1;
+					if(vidArr[v_num] == true) {
+						var video = document.getElementsByTagName('video'); //video 태그를 다 가져온다.
+						video[v_num].src = "#";
+						vidArr[v_num] = false;
+					}
+					else
+						alert("출력되는 영상이 없습니다!");
 				}
-				else
-					alert("출력되는 영상이 없습니다!");
 			});
 		});
 	});
 </script>
 </head>
 <body>
-	<input type=button class="btn" id="btn" value="영상추가">
-	<input type=button class="btn_d" id="btn1" value="1번영상">
-	<input type=button class="btn_d" id="btn2" value="2번영상">
-	<input type=button class="btn_d" id="btn3" value="3번영상">
-	<input type=button class="btn_d" id="btn4" value="4번영상">
-	<input type=button class="btn_d" id="btn5" value="5번영상">
-	<input type=button class="btn_d" id="btn6" value="6번영상">
-	<input type=button class="btn_d" id="btn7" value="7번영상">
-	<input type=button class="btn_d" id="btn8" value="8번영상">
 	<div id="widget1">
-		<fieldset>
-			<legend><strong>Video</strong></legend>
-			<table border="0">
-			   <tr>
-			      <td>
-			      	<video id="video0" controls>
-						<source src="#" type ="video/mp4">
-					  <p>지원하지않는 브라우저입니다.</P>
-					</video> 
-				  </td>
-			      <td>
-			      	<video id="video1" controls>
-						<source src="#" type ="video/mp4">
-					  <p>지원하지않는 브라우저입니다.</P>
-					</video> 
-				  </td>
-			   </tr>
-			   <tr>
-			      <td>
-			      	<video id="video2" controls>
-						<source src="#" type ="video/mp4">
-					  <p>지원하지않는 브라우저입니다.</P>
-					</video> 
-				  </td>
-			      <td>
-			      	<video id="video3" controls>
-						<source src="#" type ="video/mp4">
-					  <p>지원하지않는 브라우저입니다.</P>
-					</video> 
-				  </td>
-			   </tr>
-			   <tr>
-			      <td>
-			      	<video id="video4" controls>
-						<source src="#" type ="video/mp4">
-					  <p>지원하지않는 브라우저입니다.</P>
-					</video> 
-				  </td>
-			      <td>
-			      	<video id="video5" controls>
-						<source src="#" type ="video/mp4">
-					  <p>지원하지않는 브라우저입니다.</P>
-					</video> 
-				  </td>
-			   </tr>
-			   <tr>
-			      <td>
-			      	<video id="video6" controls>
-						<source src= type ="video/mp4">
-						<source src="img/webm" type ="video/webm">
-						<source src="img/ogv" type ="video/ogg">
-					    <source src="#">
-					  <p>지원하지않는 브라우저입니다.</P>
-					</video> 
-				  </td>
-			      <td>
-			      	<video id="video7" controls>
-						<source src="#" type ="video/mp4">
-					  <p>지원하지않는 브라우저입니다.</P>
-					</video>
-				  </td>
-			   </tr>
-			</table>
-		</fieldset>
+	<input type=button class="btn" value="영상추가">
+	<input type=button class="btn_d" value="1번영상">
+	<input type=button class="btn_d" value="2번영상">
+	<input type=button class="btn_d" value="3번영상">
+	<input type=button class="btn_d" value="4번영상">
+	<input type=button class="btn_d" value="전체삭제">
+		<div id="box">
+			<div class="tablebox">
+			     <video id="video0" controls autoplay>
+					<source style="height:100%" src="#" type ="video/mp4">
+				  <p>지원하지않는 브라우저입니다.</P>
+				</video> 
+			</div>
+			<div class="tablebox">
+			     <video id="video1" controls autoplay>
+					<source style="height:100%" src="#" type ="video/mp4">
+				  <p>지원하지않는 브라우저입니다.</P>
+				</video> 
+			</div>
+			<div class="tablebox">
+			     <video id="video2" controls autoplay>
+					<source style="height:100%" src="#" type ="video/mp4">
+				  <p>지원하지않는 브라우저입니다.</P>
+				</video> 
+			</div>
+			<div class="tablebox">
+			     <video id="video3" controls autoplay>
+					<source style="height:100%" src="#" type ="video/mp4">
+				  <p>지원하지않는 브라우저입니다.</P>
+				</video> 
+			</div>
+		</div>
 	</div>
 </body>
 </html>

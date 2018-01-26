@@ -7,17 +7,31 @@ html, body{
 }
 
 #widget1 {
-	height:auto;
+	height:100%;
 }
 
 #widget1 > fieldset {
-	height: auto;
+	height: 85%;
+	padding: 0, auto;
 }
+
+#box {
+	text-align: center;
+	height: 95%;
+}
+
+.tablebox {
+	display: inline-block;
+	width: 48%;
+	height: 48%;
+	padding: 0;
+	margin: 0;
+}
+
 table {
 	width: 100%;
 	height: 100%;
 }
-
 
 #widget1>table{
 	position: relative;
@@ -32,6 +46,7 @@ td {
 
 video{
 	width: 100%;
+	height: 100%;
 }
 
 ul{

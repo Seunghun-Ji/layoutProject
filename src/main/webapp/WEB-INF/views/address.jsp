@@ -45,7 +45,7 @@
 	
 	//주소들을 하나씩 나눔
 	function parsingJsonArr(msg) {
-		$("#shel_frame").empty();
+		$("#shel_addr_frame").empty();
 		$.each(msg, function(index, item) {
 			shelCreate(item);
 		});
@@ -58,39 +58,33 @@
 		var addr_detail = item.addr_detail;
 		var addr = addr_gu + " " + addr_detail;
 
-		var element = $("#shel_frame");
-		var prependStr = "<ul class='shel_content'>"
+		var element = $("#shel_addr_frame");
+		var prependStr = "<ul id ='shel_addr_content'>"
 				+ "<li id='sName'>" + sname + "</li>"
 				+ "<li id='aAddr'>" + addr + "</li>" + "</ul>";
 		element.append(prependStr);
 	}
 </script>
 <body>
-	
-		
-	<div id="addr_frame">
-		<table class="addr_table">
-		    <thead>
-			    <tr>
-			        <th scope="cols">구분</th>
-			        <th scope="cols">대피소 주소</th>
-			    </tr>
-		    </thead>
-		    
-		    <tbody>
-			    <tr>
-			        <th class ="gu_btn_frame" scope="row" rowspan="6">
-			        	<input type=button class="gu_btn" id ="gu_btn1" value="장안구">
-			        	<input type=button class="gu_btn" id ="gu_btn2" value="팔달구">
-			        	<input type=button class="gu_btn" id ="gu_btn3" value="권선구">
-			        	<input type=button class="gu_btn" id ="gu_btn4" value="영통구">
-			        </th>
-			        <td>
-			      		<div rowspan="6"  class="shel_frame" id="shel_frame">
-						</div>
-					</td>
-			    </tr>
-		    </tbody>
+	<div id ="frame">
+		<table id="table">
+			<tr id = "tr_head">
+				<th scope="cols">구분</th>
+				<th scope="cols">대피소 주소</th>
+			</tr>
+			<tr>
+				<td id="btn_frame" scope="row" rowspan="6">
+					<input type=button class="gu_btn" id ="gu_btn1" value="장안구">
+				    <input type=button class="gu_btn" id ="gu_btn2" value="팔달구">
+				    <input type=button class="gu_btn" id ="gu_btn3" value="권선구">
+				    <input type=button class="gu_btn" id ="gu_btn4" value="영통구">
+				</td>
+				<td rowspan="6">
+					<div id="shel_addr_frame">
+					
+					</div>
+				</td>
+			</tr>		
 		</table>
 	</div>
 	
