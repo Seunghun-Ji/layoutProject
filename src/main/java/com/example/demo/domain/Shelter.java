@@ -20,6 +20,16 @@ public class Shelter {
 	@Column(name="addr_detail",length=50)
 	private String addr_detail;
 	
+	@Column(name="division",length=10)
+	private String division;
+	
+	@Column(name="size",length=50)
+	private String size;
+	
+	@Column(name="capacity", length=50)
+	private String capacity;
+	
+	
 	
 	public String getSname() {
 		return sname;
@@ -38,6 +48,25 @@ public class Shelter {
 	}
 	public void setAddr_detail(String addr_detail) {
 		this.addr_detail = addr_detail;
+	}
+	
+	public String getDivision() {
+		return division;
+	}
+	public void setDivision(String division) {
+		this.division = division;
+	}
+	public String getSize() {
+		return size;
+	}
+	public void setSize(String size) {
+		this.size = size;
+	}
+	public String getCapacity() {
+		return capacity;
+	}
+	public void setCapacity(String capacity) {
+		this.capacity = capacity;
 	}
 	
 	@Override

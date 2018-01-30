@@ -17,7 +17,11 @@
 var msgBroker_addr;
 msgBroker_addr = new eseict.MessageBroker();
 
-	//구를 클릭했을때 해당 구의 이름을 찾고 getAddr 함수 호출	
+	/**
+ 	 * [설명] 지역구 버튼을 클릭 했을때 버튼 배열에서 해당 구를 찾고 getAddr 함수에게 구 이름을 파라미터로 호출
+	 * @author : YoonAh Park
+	 * @@since : 2018-01-29
+	 */
 	$(document).ready(function() {
 
 		
@@ -33,7 +37,11 @@ msgBroker_addr = new eseict.MessageBroker();
 		});
 	});
 		
-	//컨트롤러로 구 이름 전송 후 해당 구의 대피소 주소를 가져옴
+	/**
+	 * [설명] 컨트롤러로 구 이름 전송 후 해당 구의 대피소 주소를 가져옴
+	 * @author : YoonAh Park
+	 * @@since : 2018-01-29
+	 */
 	function getAddr(guName) {
 
 		var ob = new Object();
@@ -45,14 +53,17 @@ msgBroker_addr = new eseict.MessageBroker();
 			dataType : 'json',
 			success : function(msg) {
 				parsingJsonArr(msg);
-				
 				//구의 모든 주소를 다른 위젯에게 전달
 				guSend(msg);
 			}
 		});
 	}
 	
-	//주소들을 하나씩 나눔
+	/**
+	 * [설명] 매게변수로 받은 지역구 주소들의 배열을 하나씩 나눔
+	 * @author : YoonAh Park
+	 * @@since : 2018-01-29
+	 */
 	function parsingJsonArr(msg) {
 		$("#shel_addr_frame").empty();
 		$.each(msg, function(index, item) {
@@ -60,45 +71,74 @@ msgBroker_addr = new eseict.MessageBroker();
 		});
 	}
 
-	//대피소주소 하나씩 페이지에 보여줌
+	/**
+	 * [설명] 대피소 주소 하나씩 페이지에 보여줌 
+	 * @author : YoonAh Park
+	 * @@since : 2018-01-29
+	 */
 	function shelCreate(item) {
 		var sname = item.sname;
 		var addr_gu = item.addr_gu;
 		var addr_detail = item.addr_detail;
 		var addr = addr_gu + " " + addr_detail;
-
+		var div = item.division;
+		var size = item.size;
+		var cap = item.capacity;
+		
 		var element = $("#shel_addr_frame");
-		var prependStr = "<ul class='shel_addr_content' id ='shel_addr_content'>"
-				+ "<li class='sName' id='sName'>" + sname + "</li>"
-				+ "<li class='sAddr' id='sAddr'>" + addr + "</li>" + "</ul>";
+		var prependStr ="";
+		prependStr+= "<ul class='shel_addr_content' id ='shel_addr_content' data-div="+div+" data-size="+size+" data-cap="+cap+">"
+		prependStr+= "	<li class='sName' id='sName'>" + sname + "</li>"
+		prependStr+= "	<li class='sAddr' id='sAddr'>" + addr + "</li>" 
+		prependStr+= "</ul>";
+
 		element.append(prependStr);
 	}
 	
-	//대피소 주소 클릭시
+	/**
+	 * [설명] 대피소 주소를 클릭시 해당 주소의 정보들을 가져와서 sehlSend로 보냄
+	 * @author : YoonAh Park
+	 * @since : 2018-01-29
+	 */
 	$(document).on("click", ".shel_addr_content", function() {
 
-		var sName = $(this).find(".sName").text();
+		var sname = $(this).find(".sName").text();
 		var addr = $(this).find(".sAddr").text();
+		var div = $(this).data('div');
+		var size = $(this).data('size');
+		var cap = $(this).data('cap');
+		
 		var ob = new Object();
 		
-		ob.sName=sName;
-		ob.sAddr=addr;
+		ob.sname=sname;
+		ob.addr=addr;
+		ob.div=div;
+		ob.size=size;
+		ob.cap=cap;
+		
 		shelSend(ob);
 	});
 
-	//대피소 주소 하나를 전달
+
+	/**
+	 * [설명] 대피소 정보 주소 하나의 정보(ob)를 받아서 map위젯 혹은 video 위젯에 전송 
+	 * @author : YoonAh Park
+	 * @@since : 2018-01-29
+	 */
 	function shelSend(ob){
 		
-		msgBroker_addr.sendMessage('From_addr_To_video_Content_address', ob,
-				window.parent);
-		msgBroker_addr.sendMessage('From_addr_To_map_Content_oneShelter', ob,
-				window.parent);
+		msgBroker_addr.sendMessage('From_addr_To_video_Content_address', ob,window.parent);
+		msgBroker_addr.sendMessage('From_addr_To_map_Content_oneShelter', ob,window.parent);
 	}
 	
-	//해당 구의 모든 주소들을 전달 
+	
+	/**
+	 * [설명] 클릭한 지역구의 모든 대피소 정보를 
+	 * @author : YoonAh Park
+	 * @since : 2018-01-29
+	 */
 	function guSend(msg) {
-		msgBroker_addr.sendMessage('From_addr_To_map_Content_guShelters', msg,
-				window.parent);
+		msgBroker_addr.sendMessage('From_addr_To_map_Content_guShelters', msg,window.parent);
 	}
 	
 </script>

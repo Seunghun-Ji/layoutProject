@@ -10,11 +10,6 @@ html, body{
 	height:100%;
 }
 
-#widget1 > fieldset {
-	height: 85%;
-	padding: 0, auto;
-}
-
 #box {
 	text-align: center;
 	height: 95%;
@@ -26,22 +21,7 @@ html, body{
 	height: 48%;
 	padding: 0;
 	margin: 0;
-}
-
-table {
-	width: 100%;
-	height: 100%;
-}
-
-#widget1>table{
-	position: relative;
-	width: 100%;
-	margin: auto;
-	padding: auto;
-}
-
-td {
-	width: 50%;
+	border: 1px solid;
 }
 
 video{
@@ -49,12 +29,8 @@ video{
 	height: 100%;
 }
 
-ul{
-	list-style: none;
-}
-
-::-webkit-scrollbar {width: 12px; height: 12px;  }
+::-webkit-scrollbar {  width: 12px; height: 12px;  }
 ::-webkit-scrollbar-button:start:decrement, 
-::-webkit-scrollbar-button:end:increment {display: block; width: 12px;height: 12px; background: url() rgba(0,0,0,.05);}
+::-webkit-scrollbar-button:end:increment { display: block; width: 12px; height: 12px; background: url() rgba(0,0,0,.05); }
 ::-webkit-scrollbar-track {  background: rgba(0,0,0,.05); }
 ::-webkit-scrollbar-thumb {  background: rgba(0,0,0,.1);  }
