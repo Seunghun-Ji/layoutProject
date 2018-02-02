@@ -1,14 +1,11 @@
 package com.example.demo.dao;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +20,19 @@ public class ShelterDao extends HibernateDaoSupport {
 	
 	
 	@Autowired
-	public ShelterDao(
-			@Qualifier("hibernateSessionFactoryBean") SessionFactory sessionFactory){
+	public ShelterDao(@Qualifier("hibernateSessionFactoryBean") SessionFactory sessionFactory){
 		setSessionFactory(sessionFactory);
 		//setSessionFactory(sessionFactory); // HibernateDaoSupport
 	}
 
+	/**
+	 * 
+	 * [설명] 하이버네이트를 사용해서 해당 구의 대피소들의 주소를 받아옴
+	 * @author YoonAh Park
+	 * @since 2018. 1. 24.
+	 */
+	@SuppressWarnings("unchecked")
 	public List<Shelter> getList(String guName){
-        int result = 0;
         Session session = null;
         Criteria criteria;
      

@@ -20,7 +20,7 @@
 		<appender-ref ref="console"/>
 	</logger>
 	<!-- COM logger -->
-	<logger name="com.ese" additivity="false">
+	<logger name="com.example" additivity="false">
 		<level value="DEBUG"/>
 		<appender-ref ref="console"/>
 	</logger>

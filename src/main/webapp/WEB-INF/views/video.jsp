@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -28,7 +28,7 @@
 	$(document).ready(function() {
 		//메세지 받는 함수 : addCommandHandler(command, function()); command 명령 요청이 있으면 function 수행
 		msgBroker_Video.addCommandHandler('From_addr_To_video_Content_address', function(data){
-			var video = document.getElementsByTagName('video'); //video 태그를 다 가져온다.
+			var video = $('video'); //video 태그를 다 가져온다.
 			var max = 10; //sample 최대 개수
 			
 			//중복없는 난수 생성을 위한 변수
@@ -36,15 +36,16 @@
 			var bgNum;
 			
 			//배열에 1~max까지 집어넣는다.
-			for( var i = 1 ; i <= max ; i++)
+			for( var i = 1 ; i <= max ; i++) {
 				bgArray.push(i);
-			
+			}	
+						
 			for( var i = 0 ; i < 4 ; i++ ) {
 				bgNum = Math.floor(Math.random() * bgArray.length); //배열의 개수만큼의 범위에서 난수 생성
 				var rdm = bgArray.splice(bgNum, 1); //배열 요소를 빼고 빠진 값을 가져온다.
 				rdm = rdm.toString(); //해당 숫자를 문자로 변경
 				var str = "./images/video/sample" + rdm + ".mp4"; //sample 동영상 결정
-				video[i].src = str; //i번째 영상에 링크 변경
+				video[i].attr('src', str); //i번째 영상에 링크 변경
 			}
 		});
 	});
@@ -103,7 +104,7 @@
 </script>
 </head>
 <body>
-	<div id="widget1">
+	<!-- <div id="widget1"> -->
 	<!-- 아래 주석은 자체적으로 영상 테스트를 하기 위한 버튼, 위의 주석처리된 코드와 합쳐 동작한다. -->
 	<!-- <input type=button class="btn" value="영상추가">
 	<input type=button class="btn_d" value="1번영상">
@@ -114,29 +115,25 @@
 		<div id="box">
 			<div class="tablebox">
 			     <video controls autoplay loop>
-					<source style="height:100%" src="#" type ="video/mp4">
-				  <p>지원하지않는 브라우저입니다.</P>
+					<source style="height:100%" type ="video/mp4">
 				</video> 
 			</div>
 			<div class="tablebox">
 			     <video controls autoplay loop>
-					<source style="height:100%" src="#" type ="video/mp4">
-				  <p>지원하지않는 브라우저입니다.</P>
+					<source style="height:100%" type ="video/mp4">
 				</video> 
 			</div>
 			<div class="tablebox">
 			     <video controls autoplay loop>
-					<source style="height:100%" src="#" type ="video/mp4">
-				  <p>지원하지않는 브라우저입니다.</P>
+					<source style="height:100%" type ="video/mp4">
 				</video> 
 			</div>
 			<div class="tablebox">
 			     <video controls autoplay loop>
-					<source style="height:100%" src="#" type ="video/mp4">
-				  <p>지원하지않는 브라우저입니다.</P>
+					<source style="height:100%" type ="video/mp4">
 				</video> 
 			</div>
 		</div>
-	</div>
+	<!-- </div> -->
 </body>
 </html>

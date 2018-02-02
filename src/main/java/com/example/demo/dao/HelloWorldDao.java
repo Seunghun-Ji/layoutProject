@@ -10,6 +10,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
@@ -81,6 +82,10 @@ public class HelloWorldDao extends HibernateDaoSupport{
         try{
             session = getSessionFactory().openSession();
             criteria = session.createCriteria(HelloWorld.class);
+            
+            /*criteria.add(Restrictions.)
+            criteria.setProjection(projection)*/
+            
             list = criteria.list();
         }catch (HibernateException e){
         	System.out.println("errror~");

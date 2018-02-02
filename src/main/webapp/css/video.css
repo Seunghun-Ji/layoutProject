@@ -6,13 +6,9 @@ html, body{
 	margin: 0px;
 }
 
-#widget1 {
-	height:100%;
-}
-
 #box {
 	text-align: center;
-	height: 95%;
+	height: 100%;
 }
 
 .tablebox {

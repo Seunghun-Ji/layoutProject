@@ -3,7 +3,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <title>UXP Project</title>
 <link rel="stylesheet" type="text/css" href="./css/map_css.css">
 <script src="./js/jquery-3.3.1.min.js" type="text/javascript"></script>
@@ -154,4 +153,6 @@
 <body>
 	<div id="map_frame"></div>
 </body>
+
+
 </html>

@@ -3,35 +3,16 @@
  */
 package com.example.demo.controller;
 
-import java.io.IOException;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
-
-import com.example.demo.domain.HelloWorld;
 import com.example.demo.service.AddressService;
-import com.example.demo.service.HelloWorldService;
 
-/**
- * 
- * [설명]
- * 
- * @file : HelloWorldController.java
- * @package : com.example.demo.controller
- * @project : demo
- * @author : leebw 
- * @since : 2018. 1. 16.
- */
 
 @Controller
 //@RequestMapping(value = "/hello")
@@ -41,17 +22,26 @@ public class AddressController {
 	@Autowired
 	AddressService addressService;
 	
-	//address.jsp 호출 
-	@RequestMapping(value = "/address", method = RequestMethod.GET)
+	/**
+	 * [설명] address url을 받아서 address.jsp를 리턴
+	 * @author YoonAh Park
+	 * @since 2018-01-30
+	 */
+	@RequestMapping(value = "/address", method = {RequestMethod.GET})
 	public String addressPage(){
 		return "/address";
 	}
 	
-	//클릭한 구에 해당하는 주소 정보를 가져옴
-	@RequestMapping(value="/get/shelter/info")
+	/**
+	 * [설명] 클릭한 구에 해당하는 주소 정보를 가져옴
+	 * @author YoonAh Park
+	 * @since 2018-01-30
+	 */
+	@RequestMapping(value="/get/shelter/info", produces= "applicaion/json;charset=UTF-8")
 	@ResponseBody
-	public String getShelterAddr(HttpServletRequest request) {
-		return addressService.getShelterAddr(request);
+	public String getShelterAddr(
+			@RequestParam(value="guName", required=true, defaultValue="") String guName) {
+		return addressService.getShelterAddr(guName);
 	
 	}
 }

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -26,30 +25,33 @@ msgBroker_addr = new eseict.MessageBroker();
 
 		
 		//구버튼 클릭시 발생 이벤트
-		$('.gu_btn').each(function(i) {
-			$(this).click(function(e) {
+		
+			$('.gu_btn').click(function(e) {
 				
 				e.preventDefault();
 				var guName = $(this).attr("value");
 				//구에 해당하는 대피소 주소를 컨트롤러에서 가져옴
 				getAddr(guName);
 			});
-		});
+		
 	});
 		
 	/**
 	 * [설명] 컨트롤러로 구 이름 전송 후 해당 구의 대피소 주소를 가져옴
 	 * @author : YoonAh Park
-	 * @@since : 2018-01-29
+	 * @since : 2018-01-29
 	 */
 	function getAddr(guName) {
 
-		var ob = new Object();
-		ob.guName = guName;
+		var ob = {
+				guName : guName	
+		};
 
 		$.ajax({
 			url : '/get/shelter/info',
-			data : ob,
+			data : {
+				guName : guName	
+			},
 			dataType : 'json',
 			success : function(msg) {
 				parsingJsonArr(msg);
@@ -62,7 +64,7 @@ msgBroker_addr = new eseict.MessageBroker();
 	/**
 	 * [설명] 매게변수로 받은 지역구 주소들의 배열을 하나씩 나눔
 	 * @author : YoonAh Park
-	 * @@since : 2018-01-29
+	 * @since : 2018-01-29
 	 */
 	function parsingJsonArr(msg) {
 		$("#shel_addr_frame").empty();
@@ -108,13 +110,13 @@ msgBroker_addr = new eseict.MessageBroker();
 		var size = $(this).data('size');
 		var cap = $(this).data('cap');
 		
-		var ob = new Object();
-		
-		ob.sname=sname;
-		ob.addr=addr;
-		ob.div=div;
-		ob.size=size;
-		ob.cap=cap;
+		var ob = {
+				sname : sname,
+				addr : addr,
+				div : div,
+				size: size,
+				cap: cap
+		};
 		
 		shelSend(ob);
 	});
@@ -150,13 +152,13 @@ msgBroker_addr = new eseict.MessageBroker();
 				<th scope="cols">대피소 주소</th>
 			</tr>
 			<tr>
-				<td id="btn_frame" scope="row" rowspan="6">
+				<td id="btn_frame" scope="row">
 					<input type=button class="gu_btn" id ="gu_btn1" value="장안구">
 				    <input type=button class="gu_btn" id ="gu_btn2" value="팔달구">
 				    <input type=button class="gu_btn" id ="gu_btn3" value="권선구">
 				    <input type=button class="gu_btn" id ="gu_btn4" value="영통구">
 				</td>
-				<td rowspan="6">
+				<td>
 					<div id="shel_addr_frame">
 					
 					</div>
