@@ -109,15 +109,34 @@ msgBroker_addr = new eseict.MessageBroker();
 		var div = $(this).data('div');
 		var size = $(this).data('size');
 		var cap = $(this).data('cap');
+
+		var bgArray = [];
+		var bgVideo = [];
+		var bgNum;
+
+		for( var i = 1 ; i <= 10 ; i++ ) {
+			bgArray.push(i);
+		}
+
+		for( var i = 0 ; i < 4 ; i++ ) {
+			bgNum = Math.floor(Math.random() * bgArray.length); //배열의 개수만큼의 범위에서 난수 생성
+			var rdm = bgArray.splice(bgNum, 1); //배열 요소를 빼고 빠진 값을 가져온다.
+			rdm = rdm.toString(); //해당 숫자를 문자로 변경
+			var str = "./video/sample" + rdm + ".mp4"; //sample 동영상 결정
+			bgVideo.push(str); //영상 링크 삽입
+		}
+		
+		var videosrc = bgVideo;
 		
 		var ob = {
 				sname : sname,
 				addr : addr,
 				div : div,
 				size: size,
-				cap: cap
+				cap: cap,
+				videosrc : videosrc
 		};
-		
+
 		shelSend(ob);
 	});
 

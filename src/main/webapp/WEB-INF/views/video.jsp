@@ -27,8 +27,13 @@
 	 */
 	$(document).ready(function() {
 		//메세지 받는 함수 : addCommandHandler(command, function()); command 명령 요청이 있으면 function 수행
-		msgBroker_Video.addCommandHandler('From_addr_To_video_Content_address', function(data){
+		console.log("msgBroker");
+		var val = msgBroker_Video.addCommandHandler('From_addr_To_video_Content_address', function(data){
 			var video = $('video'); //video 태그를 다 가져온다.
+			for (var i = 0 ; i < 4 ; i++) {
+				video[i].src = data.videosrc[i]; //data 안에 담겨진 video src값을 하나씩 올린다.
+			}
+			/*
 			var max = 10; //sample 최대 개수
 			
 			//중복없는 난수 생성을 위한 변수
@@ -39,15 +44,16 @@
 			for( var i = 1 ; i <= max ; i++) {
 				bgArray.push(i);
 			}	
-						
+			
 			for( var i = 0 ; i < 4 ; i++ ) {
 				bgNum = Math.floor(Math.random() * bgArray.length); //배열의 개수만큼의 범위에서 난수 생성
 				var rdm = bgArray.splice(bgNum, 1); //배열 요소를 빼고 빠진 값을 가져온다.
 				rdm = rdm.toString(); //해당 숫자를 문자로 변경
 				var str = "./images/video/sample" + rdm + ".mp4"; //sample 동영상 결정
-				video[i].attr('src', str); //i번째 영상에 링크 변경
-			}
+				video[i].src = str; //i번째 영상에 링크 변경
+			}*/
 		});
+		console.log(val);
 	});
 	
 	/* 
